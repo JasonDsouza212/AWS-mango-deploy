@@ -1,14 +1,15 @@
 //  #!/usr/bin/env groovy
 pipeline{
     agent any
-    stages("init"){
+    stages{
+           stage("init"){
         steps{
             script{
                 echo "initilizized";
             }
         }
     }
-    stages("deploy"){
+    stage("deploy"){
         steps{
                script {
                     def dockerCmd= 'docker run -p 3080:3080 -d jasonkd006/my-repo:1.0'
@@ -18,5 +19,6 @@ pipeline{
                    
                 }
         }
+    }
     }
 }
