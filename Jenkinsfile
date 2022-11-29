@@ -1,4 +1,5 @@
-pipelime{
+//  #!/usr/bin/env groovy
+pipeline{
     agent any
     stages("init"){
         steps{
